@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+  import { Container, Nav, Navbar } from 'react-bootstrap';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+  import './App.css';
+  import AllPosts from './components/AllPosts';
+  import Counter from './components/Counter'
+  import Welcome from './components/Welcome';
+  
+  function App() {
+    
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+      <BrowserRouter>
+  <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">React App with Router</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/">Posts</Nav.Link>
+              <Nav.Link as={Link} to="/welcome">Welcome</Nav.Link>
+              <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      
+          <Routes>
+            <Route path='/' element={<AllPosts/>} />
+            <Route path='/welcome' element={<Welcome/>} />
+            <Route path='/counter' element={<Counter/>} />
+            </Routes>    
+      </BrowserRouter>
+    );
+  }
 
-export default App;
+  export default App;
