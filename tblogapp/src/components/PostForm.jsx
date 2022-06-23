@@ -8,18 +8,18 @@ const PostForm = (props) => {
     const [postName, setPostName] = useState('');
     const [postId, setPostId] = useState('');
 
-    const formSubmitted = (event) =>{
+    const addPost = (event) =>{
         event.preventDefault();
         let post = {
             "post_name" : postName,
             "post_id" : postId
         }
         console.log(post);
-        props.formSubmitted(post);
+        props.submitForm(post);
     }
 
   return (
-    <Form onSubmit={formSubmitted}>
+    <Form onSubmit={addPost}>
     <Form.Group className="mb-3" controlId="formPostName">
       <Form.Label>Post Name</Form.Label>
       <Form.Control type="text" placeholder="Enter post name" value={postName}

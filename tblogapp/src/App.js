@@ -1,9 +1,9 @@
   import { Container, Nav, Navbar } from 'react-bootstrap';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+  import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
   import './App.css';
   import AllPosts from './components/AllPosts';
   import Counter from './components/Counter'
-import PostDetail from './components/PostDetail';
+  import PostDetail from './components/PostDetail';
   import Welcome from './components/Welcome';
   
   function App() {

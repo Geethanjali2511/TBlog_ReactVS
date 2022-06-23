@@ -30,7 +30,7 @@ const AllPosts = () => {
       </div>)
 
     const addNewPost = (post) => {
-       axios.post("http://localhost:8080/posts",post)
+       axios.post("http://localhost:8080/post",post)
        .then (response =>{
           getAllPosts();
        })

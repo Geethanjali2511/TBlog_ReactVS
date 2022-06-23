@@ -5,6 +5,7 @@ const PostDetail = () => {
 
     const [post, setPost] = useState({})
 
+
 const {id} =useParams();
 
 useEffect (() => {
@@ -15,6 +16,7 @@ useEffect (() => {
     .catch(error =>{
         console.log(error);
     })
+
 
 }, [])
 
