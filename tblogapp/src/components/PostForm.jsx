@@ -11,7 +11,6 @@ const PostForm = (props) => {
     const formSubmitted = (event) =>{
         event.preventDefault();
         let post = {
-            "id" : 6,
             "post_name" : postName,
             "post_id" : postId
         }

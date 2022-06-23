@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import pic from '../assets/wit.jpg'
 
 const Post = (props) => {
@@ -11,7 +12,7 @@ const Post = (props) => {
       
       <Card.Text>This is team {props.post.post_id}.
       </Card.Text>
-      <Button variant="primary">Here</Button>
+      <Button as={Link} to={'/post/'+ props.post.post_id} variant="primary">Here</Button>
     </Card.Body>
   </Card>
   )

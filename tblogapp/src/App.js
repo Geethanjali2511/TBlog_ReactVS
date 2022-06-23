@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
   import './App.css';
   import AllPosts from './components/AllPosts';
   import Counter from './components/Counter'
+import PostDetail from './components/PostDetail';
   import Welcome from './components/Welcome';
   
   function App() {
@@ -28,6 +29,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
             <Route path='/' element={<AllPosts/>} />
             <Route path='/welcome' element={<Welcome/>} />
             <Route path='/counter' element={<Counter/>} />
+            <Route path='/post/:id' element={<PostDetail/>} />
             </Routes>    
       </BrowserRouter>
     );
